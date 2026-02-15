@@ -9,43 +9,42 @@ This OpenClaw skill monitors HK, US, and A-share stocks to detect if their price
 - `scripts/stabilization.py`: Core logic for detecting stabilization patterns.
 - `libs/`: Directory for the `kdata` wheel file (`kdata-3.0.3-py3-none-any.whl`).
 - `SKILL.md`: Skill definition and SOPs for OpenClaw.
-- `scripts/main.py`: The entry point script that orchestrates data fetching and analysis.
+- `scripts/main.py`: The entry point script with subcommand support (`add`, `remove`, `report`).
 - `scripts/stabilization.py`: Core logic for detecting stabilization patterns.
-- `libs/`: Directory for the `kdata` wheel file (`kdata-3.0.3-py3-none-any.whl`).
-- `pyproject.toml`: Project configuration and dependencies managed by `uv`.
+- `libs/`: Directory for the `kdata` wheel file.
+- `watchlist.json`: Persistent list of monitored stocks.
+- `pyproject.toml`: Project configuration managed by `uv`.
 
 ## Detection Logic
 
-The skill evaluates stabilization based on four primary factors:
-1.  **Price Consolidation**: Checks if the price has moved within a narrow range (e.g., < 5%) over the last 10 days.
-2.  **Volume Trend**: Verifies if selling pressure has decreased (low volume relative to average).
-3.  **MA Flattening**: Checks if short-term moving averages (5-day vs 10-day) are converging/flattening.
-4.  **Trend Support**: Checks if the price is holding above key levels (e.g., 20-day SMA).
+The skill evaluates stabilization based on price consolidation, volume trends, moving averages, and trend support.
 
 ## Usage
 
-### 1. Installation
-The project uses `uv` for dependency management. To sync and install:
+### 1. Watchlist Management
+Add or remove stocks from your daily monitoring list:
 ```bash
-uv sync
+uv run scripts/main.py add hk.0700
+uv run scripts/main.py remove us.AAPL
 ```
 
-### 2. Running the Monitor
-Run the analysis for a specific stock using `uv run`:
+### 2. Daily Report
+Analyze all stocks in the watchlist and generate a summary:
+```bash
+uv run scripts/main.py report
+```
 
-- **Hong Kong**: `uv run scripts/main.py hk.0700`
-- **US Stocks**: `uv run scripts/main.py us.AAPL`
-- **A-Shares**: `uv run scripts/main.py sh.600000` or `sz.000001`
+### 3. Quick Analysis
+Analyze a single stock without adding it to the watchlist:
+```bash
+uv run scripts/main.py us.TSLA
+```
 
 ## Deployment
-
-The skill checks for the `K_DATA_CENTER` environment variable. If it is not set, it defaults to `/opt/kdata_data`. To override this, set the variable in your environment:
-
-```bash
-export K_DATA_CENTER="/your/custom/path"
-```
+Ensure `K_DATA_CENTER` is set, or it defaults to `/opt/kdata_data`.
 
 ## Customization
-You can adjust the stabilization thresholds (e.g., the 5% consolidation range) in `scripts/stabilization.py`.
+Adjust thresholds in `scripts/stabilization.py`.
+
 
 

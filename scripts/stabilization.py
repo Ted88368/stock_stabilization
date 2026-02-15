@@ -45,10 +45,17 @@ def is_stabilized(df, ticker):
 
     stabilized_flag = score >= 60
 
+    # Extract latest date and price for reporting
+    last_row = df.iloc[-1]
+    last_date = str(df.index[-1]).split(' ')[0] # Handle datetime or string index
+    last_close = float(last_row['close'])
+
     return {
         "ticker": ticker,
         "stabilized": bool(stabilized_flag),
         "score": int(score),
+        "last_date": last_date,
+        "last_close": last_close,
         "details": {
             "price_range_10d": f"{price_range:.2%}",
             "volume_vs_avg": f"{float(last_vol/last_vol_avg):.2f}x",
@@ -56,5 +63,6 @@ def is_stabilized(df, ticker):
             "above_sma20": bool(above_sma20)
         }
     }
+
 
 
