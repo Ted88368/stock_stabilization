@@ -121,7 +121,7 @@ def main():
             for res in results:
                 status = "✅ 企稳" if res['stabilized'] else "❌ 未企稳"
                 print(f"[{res['ticker']}] {status} | Price: {res['last_close']} (Date: {res['last_date']})")
-                print(f"   Score: {res['score']}/100 | Range: {res['details']['price_range_10d']}, Vol: {res['details']['volume_vs_avg']}")
+                print(f"   Score: {res['score']}/100 | Range: {res['details']['price_range_10d']}, Vol: {res['details']['volume_vs_avg']}, Pattern: {res['details']['bullish_pattern']}")
         print("-" * 40)
 
     else:
@@ -133,6 +133,7 @@ def main():
             print(f"Analysis for {ticker}: {status} (Score: {res['score']})")
             print(f"Latest Close: {res['last_close']} (Date: {res['last_date']})")
             print(f"Details: {res['details']}")
+
         else:
             print(f"Failed to analyze {ticker}")
 

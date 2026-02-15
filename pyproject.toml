@@ -7,8 +7,10 @@ requires-python = ">=3.12"
 dependencies = [
     "kdata",
     "pandas>=3.0.0",
+    "tradingpattern",
     "yfinance>=1.1.0",
 ]
 
 [tool.uv.sources]
 kdata = { path = "libs/kdata-3.0.3-py3-none-any.whl" }
+tradingpattern = { path = "libs/tradingpattern-0.2.7-py3-none-any.whl" }
