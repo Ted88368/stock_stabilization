@@ -1,0 +1,7 @@
+# Standard dependencies
+# pandas
+# numpy
+
+# Local wheel dependencies
+# To install a wheel from the libs directory, uncomment and use:
+# ./libs/your_package.whl
