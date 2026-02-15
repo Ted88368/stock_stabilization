@@ -7,7 +7,13 @@ from datetime import datetime, timedelta
 LIBS_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'libs'))
 sys.path.append(LIBS_PATH)
 
+# Deployment environment check
+if "K_DATA_CENTER" not in os.environ:
+    print("K_DATA_CENTER not found, setting to /opt/kdata_data")
+    os.environ["K_DATA_CENTER"] = "/opt/kdata_data"
+
 from stabilization import is_stabilized
+
 
 def fetch_data(ticker):
     """

@@ -37,7 +37,15 @@ Run the analysis for a specific stock using `uv run`:
 - **US Stocks**: `uv run scripts/main.py us.AAPL`
 - **A-Shares**: `uv run scripts/main.py sh.600000` or `sz.000001`
 
+## Deployment
+
+The skill checks for the `K_DATA_CENTER` environment variable. If it is not set, it defaults to `/opt/kdata_data`. To override this, set the variable in your environment:
+
+```bash
+export K_DATA_CENTER="/your/custom/path"
+```
 
 ## Customization
 You can adjust the stabilization thresholds (e.g., the 5% consolidation range) in `scripts/stabilization.py`.
+
 

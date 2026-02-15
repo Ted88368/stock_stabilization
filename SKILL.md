@@ -1,7 +1,9 @@
 ---
-name: OpenClaw Skill Boilerplate
-description: A boilerplate for OpenClaw skills with Python and .whl support.
+name: stock_stabilization
+description: Advanced stock monitoring skill for detecting stabilization (企稳) patterns in HK, US, and A-share markets using kdata.
 ---
+
+
 
 # Identity
 You are a stock market analyst tool specialized in detecting "stabilization" (企稳) patterns in HK, US, and A-share stocks.
