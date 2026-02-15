@@ -40,8 +40,8 @@ def is_stabilized(df, ticker):
     pattern_name = "None"
     try:
         from tradingpatterns import get_recent_bullish_patterns
-        # Check for confirmed patterns with at least strength 2 in the last 10 days
-        patterns = get_recent_bullish_patterns(df, n=3, enable_confirmation=True, min_strength=3)
+        # Check for confirmed patterns with at least strength 2 in the last 3 days
+        patterns = get_recent_bullish_patterns(df, n=3, enable_confirmation=True, min_strength=2)
         if patterns:
             has_bullish_pattern = True
             pattern_name = patterns[-1]['pattern']
