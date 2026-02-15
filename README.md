@@ -29,10 +29,14 @@ uv run scripts/main.py remove us.AAPL
 ```
 
 ### 2. Daily Report
-Analyze all stocks in the watchlist and generate a summary:
+Analyze all stocks or specific markets:
 ```bash
-uv run scripts/main.py report
+uv run scripts/main.py report       # All markets
+uv run scripts/main.py report hk    # HK only
+uv run scripts/main.py report us    # US only
+uv run scripts/main.py report as    # A-shares only
 ```
+
 
 ### 3. Quick Analysis
 Analyze a single stock without adding it to the watchlist:
