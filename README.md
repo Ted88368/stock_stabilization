@@ -47,8 +47,12 @@ uv run scripts/main.py us.TSLA
 ## Deployment
 Ensure `K_DATA_CENTER` is set, or it defaults to `/opt/kdata_data`.
 
+## Importing to OpenClaw
+For detailed instructions on how to use this skill with the OpenClaw agent, see [IMPORT_GUIDE.md](file:///Users/hy/wk/github/stock_stabilization/IMPORT_GUIDE.md).
+
 ## Customization
 Adjust thresholds in `scripts/stabilization.py`.
+
 
 
 
