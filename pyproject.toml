@@ -1,0 +1,14 @@
+[project]
+name = "stock-stabilization"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "kdata",
+    "pandas>=3.0.0",
+    "yfinance>=1.1.0",
+]
+
+[tool.uv.sources]
+kdata = { path = "libs/kdata-3.0.3-py3-none-any.whl" }
