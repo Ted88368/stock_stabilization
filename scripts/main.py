@@ -38,7 +38,7 @@ def save_watchlist(watchlist):
 def get_market_key(ticker):
     if ticker.startswith('hk.'): return 'hk'
     if ticker.startswith('us.'): return 'us'
-    if ticker.startswith('sh.') or ticker.startswith('sz.'): return 'as'
+    if ticker.startswith('sh.') or ticker.startswith('sz.') or ticker.startswith('as.'): return 'as'
     return 'us' # Default
 
 def fetch_data(ticker):

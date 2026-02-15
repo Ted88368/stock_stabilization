@@ -15,7 +15,7 @@ You are a stock market analyst tool specialized in detecting "stabilization" (ä¼
 
 
 # Example Usage
-- Add a stock: `uv run scripts/main.py add hk.0700`
+- Add a stock: `uv run scripts/main.py add hk.0700` (HK), `uv run scripts/main.py add sh.600519` (A-share SH), `uv run scripts/main.py add sz.000001` (A-share SZ)
 - Remove a stock: `uv run scripts/main.py remove us.AAPL`
 - Get daily report: `uv run scripts/main.py report`
 

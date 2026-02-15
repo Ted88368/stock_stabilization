@@ -24,8 +24,10 @@ The skill evaluates stabilization based on price consolidation, volume trends, m
 ### 1. Watchlist Management
 Add or remove stocks from your daily monitoring list:
 ```bash
-uv run scripts/main.py add hk.0700
-uv run scripts/main.py remove us.AAPL
+uv run scripts/main.py add hk.0700          # HK
+uv run scripts/main.py add sh.600519       # A-share (Shanghai)
+uv run scripts/main.py add sz.000001       # A-share (Shenzhen)
+uv run scripts/main.py remove us.AAPL      # US
 ```
 
 ### 2. Daily Report
