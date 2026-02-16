@@ -56,7 +56,8 @@ def is_stabilized(df, ticker):
     if above_sma20: score += 10
     if has_bullish_pattern: score += 30
 
-    stabilized_flag = score >= 60
+    # 放宽要求
+    stabilized_flag = score >= 60 or has_bullish_pattern
 
     # Extract latest date and price for reporting
     last_row = df.iloc[-1]
