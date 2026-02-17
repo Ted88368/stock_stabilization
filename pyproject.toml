@@ -12,5 +12,5 @@ dependencies = [
 ]
 
 [tool.uv.sources]
-kdata = { path = "libs/kdata-3.0.3-py3-none-any.whl" }
 tradingpattern = { path = "libs/tradingpattern-0.2.7-py3-none-any.whl" }
+kdata = { path = "libs/kdata-3.2.0-py3-none-any.whl" }

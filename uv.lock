@@ -733,8 +733,8 @@ sdist = { url = "https://mirrors.ustc.edu.cn/pypi/packages/cf/a1/693351acd0a9edc
 
 [[package]]
 name = "kdata"
-version = "3.0.3"
-source = { path = "libs/kdata-3.0.3-py3-none-any.whl" }
+version = "3.2.0"
+source = { path = "libs/kdata-3.2.0-py3-none-any.whl" }
 dependencies = [
     { name = "aiohttp" },
     { name = "akshare" },
@@ -763,7 +763,7 @@ dependencies = [
     { name = "yfinance" },
 ]
 wheels = [
-    { filename = "kdata-3.0.3-py3-none-any.whl", hash = "sha256:90c510e307a5579adf1329f3f22786c73bb618648496b135224f130756ae2e9d" },
+    { filename = "kdata-3.2.0-py3-none-any.whl", hash = "sha256:b760f9ca64b30542ad869c13be9f0049dbac2f8fb9dbfdd8a3a785d9308df28b" },
 ]
 
 [package.metadata]
@@ -1934,7 +1934,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "kdata", path = "libs/kdata-3.0.3-py3-none-any.whl" },
+    { name = "kdata", path = "libs/kdata-3.2.0-py3-none-any.whl" },
     { name = "pandas", specifier = ">=3.0.0" },
     { name = "tradingpattern", path = "libs/tradingpattern-0.2.7-py3-none-any.whl" },
     { name = "yfinance", specifier = ">=1.1.0" },
