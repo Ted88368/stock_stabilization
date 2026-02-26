@@ -1,6 +1,12 @@
 ---
 name: stock_stabilization
 description: Advanced stock monitoring skill for detecting stabilization (企稳) patterns in HK, US, and A-share markets using kdata.
+env_vars:
+  - K_DATA_CENTER
+  - LONGPORT_APP_KEY
+  - LONGPORT_APP_SECRET
+  - LONGPORT_ACCESS_TOKEN
+  - TIINGO_API_KEYS
 ---
 
 
