@@ -1923,7 +1923,7 @@ wheels = [
 
 [[package]]
 name = "stock-stabilization"
-version = "0.1.0"
+version = "0.0.4"
 source = { virtual = "." }
 dependencies = [
     { name = "kdata" },

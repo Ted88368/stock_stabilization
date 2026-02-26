@@ -10,7 +10,7 @@ sys.path.append(LIBS_PATH)
 
 # Deployment environment check
 DATA_CENTER = os.environ.get("K_DATA_CENTER", "/opt/kdata_data")
-WATCHLIST_PATH = os.path.join(os.path.dirname(__file__), '..', 'watchlist.json')
+WATCHLIST_PATH = os.environ.get("WATCHLIST_PATH", os.path.join(os.path.dirname(__file__), '..', 'watchlist.json'))
 
 from stabilization import is_stabilized
 

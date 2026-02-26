@@ -41,6 +41,8 @@ The skill relies on specific environment variables for data fetching and notific
 ```env
 # Required for Data Fetching
 K_DATA_CENTER=/opt/kdata_data
+# Optional: Set a custom path for the watchlist to avoid overwrites during skill updates
+WATCHLIST_PATH=/absolute/path/to/safe/dir/watchlist.json
 LONGPORT_APP_KEY=your_app_key
 LONGPORT_APP_SECRET=your_app_secret
 LONGPORT_ACCESS_TOKEN=your_access_token
